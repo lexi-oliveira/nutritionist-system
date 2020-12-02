@@ -145,7 +145,7 @@ public class FoodGroups {
 		System.out.println("\nCOMBINACOES POSSIVEIS DE ALIMENTOS PARA ESSA DIETA:\n");
 		
 		if(combinations.isEmpty()) {
-			System.out.println("Nao ha combinacoes possiveis para esse limite calorico!");
+			System.out.println("NAO HA COMBINACOES POSSIVEIS PARA ESSE LIMITE CALORICO!");
 		}
 		else {
 			for (Food food : combinations) {

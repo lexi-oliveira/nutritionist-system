@@ -5,9 +5,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Client {
+public class Client implements Comparable<Client> {
 	
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");  // for the appointment 
+	private static SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");  // for the client
+	private static SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm");  // for the appointment 
 	
 	private String name;
 	private String address;
@@ -78,7 +79,7 @@ public class Client {
 	
 	public boolean removeAppointment(Date appointmentDate) { // remove the appointment based on the date and time it was performed
 		for(Appointment app : appointments) {
-			if(sdf.format(app.getDate()).equals(sdf.format(appointmentDate))) {
+			if(sdf2.format(app.getDate()).equals(sdf2.format(appointmentDate))) {
 				appointments.remove(app);
 				return true;
 			}
@@ -91,5 +92,29 @@ public class Client {
 		for(Appointment app : appointments) {
 			System.out.println(app + "\n");
 		}
+		if (appointments.isEmpty()) {
+			System.out.println("CLIENTE NAO POSSUI CONSULTAS!");
+		}
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Cliente: ");
+		sb.append(name + "\n");
+		sb.append("Endereco: ");
+		sb.append(address + "\n");
+		sb.append("Telefone: ");
+		sb.append(phone + "\n");
+		sb.append("Email: ");
+		sb.append(email + "\n");
+		sb.append("Data de nascimento: ");
+		sb.append(sdf1.format(birthDate) + "\n");
+		return sb.toString();
+	}
+	
+	@Override
+    public int compareTo(Client f) {
+        return this.getName().compareTo(f.getName());
+    }
 }
