@@ -42,33 +42,33 @@ public class FunctionalTests {
 	}
 	
 	public static void foodGroups() {
-		FoodGroups groups = new FoodGroups();
+		//FoodGroups groups = new FoodGroups();
 		
-		groups.addFood(new Food("Acucar", 50.0, Group.valueOf("GROUP1")));
-		groups.addFood(new Food("Arroz", 50.0, Group.valueOf("GROUP1")));
-		groups.addFood(new Food("Noz", 100.0, Group.valueOf("GROUP1")));
-		groups.addFood(new Food("Maca", 200.0, Group.valueOf("GROUP1")));
-		groups.addFood(new Food("Chocolate", 200.0, Group.valueOf("GROUP1")));
+		FoodGroups.addFood(new Food("Acucar", 50.0, Group.valueOf("GROUP1")));
+		FoodGroups.addFood(new Food("Arroz", 50.0, Group.valueOf("GROUP1")));
+		FoodGroups.addFood(new Food("Noz", 100.0, Group.valueOf("GROUP1")));
+		FoodGroups.addFood(new Food("Maca", 200.0, Group.valueOf("GROUP1")));
+		FoodGroups.addFood(new Food("Chocolate", 200.0, Group.valueOf("GROUP1")));
 		
-		groups.addFood(new Food("Salsa", 50.0, Group.valueOf("GROUP2")));
-		groups.addFood(new Food("Pepino", 50.0, Group.valueOf("GROUP2")));
-		groups.addFood(new Food("Tomate", 100.0, Group.valueOf("GROUP2")));
-		groups.addFood(new Food("Pera", 200.0, Group.valueOf("GROUP2")));
-		groups.addFood(new Food("Cebola", 200.0, Group.valueOf("GROUP2")));
+		FoodGroups.addFood(new Food("Salsa", 50.0, Group.valueOf("GROUP2")));
+		FoodGroups.addFood(new Food("Pepino", 50.0, Group.valueOf("GROUP2")));
+		FoodGroups.addFood(new Food("Tomate", 100.0, Group.valueOf("GROUP2")));
+		FoodGroups.addFood(new Food("Pera", 200.0, Group.valueOf("GROUP2")));
+		FoodGroups.addFood(new Food("Cebola", 200.0, Group.valueOf("GROUP2")));
 		
-		groups.addFood(new Food("Mamao", 50.0, Group.valueOf("GROUP3")));
-		groups.addFood(new Food("Melao", 50.0, Group.valueOf("GROUP3")));
-		groups.addFood(new Food("Melancia", 100.0, Group.valueOf("GROUP3")));
-		groups.addFood(new Food("Carne", 200.0, Group.valueOf("GROUP3")));
-		groups.addFood(new Food("Caju", 200.0, Group.valueOf("GROUP3")));
+		FoodGroups.addFood(new Food("Mamao", 50.0, Group.valueOf("GROUP3")));
+		FoodGroups.addFood(new Food("Melao", 50.0, Group.valueOf("GROUP3")));
+		FoodGroups.addFood(new Food("Melancia", 100.0, Group.valueOf("GROUP3")));
+		FoodGroups.addFood(new Food("Carne", 200.0, Group.valueOf("GROUP3")));
+		FoodGroups.addFood(new Food("Caju", 200.0, Group.valueOf("GROUP3")));
 		
 		
-		groups.removeFood("Chocolate", Group.valueOf("GROUP1"));
-		groups.removeFood("Cebola", Group.valueOf("GROUP2"));
-		groups.removeFood("Caju", Group.valueOf("GROUP3"));
+		FoodGroups.removeFood("Chocolate", Group.valueOf("GROUP1"));
+		FoodGroups.removeFood("Cebola", Group.valueOf("GROUP2"));
+		FoodGroups.removeFood("Caju", Group.valueOf("GROUP3"));
 		
-		groups.showFoodGroups();
-		groups.showCombinations(groups.caloricCombinations(600.0));
+		FoodGroups.showFoodGroups();
+		FoodGroups.showCombinations(FoodGroups.caloricCombinations(600.0));
 		System.out.println("\nExpected 64 combinations above.\n");
 	}
 }

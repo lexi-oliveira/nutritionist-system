@@ -6,10 +6,8 @@ public class MainUnitary {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Inicio testes unitarios:\n");
-		
 		UnitaryFood.allUnitaryTests();
-		System.out.println("All Food unitary tests passed!\n");
+		System.out.println("\nAll Food unitary tests passed!\n");
 		
 		try {
 			UnitaryAppointment.allUnitaryTests();
@@ -27,7 +25,7 @@ public class MainUnitary {
 			System.out.println("Date error in Appointment unitary tests");
 		}
 		
-		System.out.println("Termino: ");
+		System.out.println("\nAll unitary tests passed!\\n ");
 
 	}
 

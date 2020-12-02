@@ -5,23 +5,23 @@ import java.util.Collections;
 import java.util.List;
 
 public class FoodGroups {
-	private List<Food> group1 = new ArrayList<>();
-	private List<Food> group2 = new ArrayList<>();
-	private List<Food> group3 = new ArrayList<>();
+	private static List<Food> group1 = new ArrayList<>();
+	private static List<Food> group2 = new ArrayList<>();
+	private static List<Food> group3 = new ArrayList<>();
 	
-	public List<Food> getGroup1(){
+	public static List<Food> getGroup1(){
 		return group1;
 	}
 	
-	public List<Food> getGroup2(){
+	public static List<Food> getGroup2(){
 		return group2;
 	}
 	
-	public List<Food> getGroup3(){
+	public static List<Food> getGroup3(){
 		return group3;
 	}
 	
-	public void addFood(Food newFood) {
+	public static void addFood(Food newFood) {
 		if (newFood.getGroupIdentifier() == Group.GROUP1) {
 			group1.add(newFood);
 			Collections.sort(group1);
@@ -36,7 +36,7 @@ public class FoodGroups {
 		}
 	}
 	
-	public boolean removeFood(String name, Group gp) {
+	public static boolean removeFood(String name, Group gp) {
 		if(gp == Group.GROUP1) {
 			for(Food food : group1) {
 				if (food.getName().equals(name)) {
@@ -64,7 +64,7 @@ public class FoodGroups {
 		}
 	}
 	
-	public void showFoodGroups() { // formatting for output
+	public static void showFoodGroups() { // formatting for output
 		System.out.print("\nGRUPOS ALIMENTARES: \n");
 		
 		System.out.print("GRUPO 1: ");
@@ -86,7 +86,7 @@ public class FoodGroups {
 		System.out.println();
 	}
 	
-	public List<Food> combinationGroups(List<Food> first, List<Food> second, List<Food> third, Double  caloricLimit) { //verification of available foods within the calorie limit
+	public static List<Food> combinationGroups(List<Food> first, List<Food> second, List<Food> third, Double  caloricLimit) { //verification of available foods within the calorie limit
 		List<Food> combinations = new ArrayList<>();
 		for(int i = 0; i < first.size(); i++) {
 			for(int j = 0; j < second.size(); j++) {
@@ -112,7 +112,7 @@ public class FoodGroups {
 		return combinations;
 	}
 	
-	public List<Food> caloricCombinations(Double caloricLimit){ // implies that will start comparing from the largest to the smallest food group
+	public static List<Food> caloricCombinations(Double caloricLimit){ // implies that will start comparing from the largest to the smallest food group
 		
 		if(group1.size() >= group2.size() && group1.size() >= group3.size()) {
 			if(group2.size() >= group3.size()) {
@@ -140,7 +140,7 @@ public class FoodGroups {
 		}
 	}
 	
-	public void showCombinations(List<Food> combinations) { // formatting for output
+	public static void showCombinations(List<Food> combinations) { // formatting for output
 		int i = 1, j = 0;
 		System.out.println("\nCOMBINACOES POSSIVEIS DE ALIMENTOS PARA ESSA DIETA:\n");
 		
