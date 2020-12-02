@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Appointment {
 	
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm"); // static for all objects to have the same date format
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm"); // static for all objects to have the same and unique date format
 	
 	private Date date;
 	private Double weightPatient;

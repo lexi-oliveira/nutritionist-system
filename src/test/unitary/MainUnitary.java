@@ -16,7 +16,15 @@ public class MainUnitary {
 			System.out.println("All appointment unitary tests passed!\n");
 		}
 		catch(ParseException e) {
-			System.out.println("Date error");
+			System.out.println("Date error in Appointment unitary tests");
+		}
+		
+		try {
+			UnitaryClient.allUnitaryTests();
+			System.out.println("All client unitary tests passed!\n");
+		}
+		catch(ParseException e) {
+			System.out.println("Date error in Appointment unitary tests");
 		}
 		
 		System.out.println("Termino");

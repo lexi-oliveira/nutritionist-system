@@ -7,7 +7,7 @@ import entities.Appointment;
 
 public class UnitaryAppointment {
 	
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");  // static for all objects to have the same and unique date format
 	
 	public static void constructors() throws ParseException { // unitary tests of Appointment constructors
 		Appointment appointment = new Appointment();
