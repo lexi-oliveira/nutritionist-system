@@ -9,11 +9,11 @@ public class MainUnitary {
 		System.out.println("Inicio testes unitarios:\n");
 		
 		UnitaryFood.allUnitaryTests();
-		System.out.println("All food unitary tests passed!\n");
+		System.out.println("All Food unitary tests passed!\n");
 		
 		try {
 			UnitaryAppointment.allUnitaryTests();
-			System.out.println("All appointment unitary tests passed!\n");
+			System.out.println("All Appointment unitary tests passed!\n");
 		}
 		catch(ParseException e) {
 			System.out.println("Date error in Appointment unitary tests");
@@ -21,7 +21,7 @@ public class MainUnitary {
 		
 		try {
 			UnitaryClient.allUnitaryTests();
-			System.out.println("All client unitary tests passed!\n");
+			System.out.println("All Client unitary tests passed!\n");
 		}
 		catch(ParseException e) {
 			System.out.println("Date error in Appointment unitary tests");

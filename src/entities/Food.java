@@ -1,6 +1,6 @@
 package entities;
 
-public class Food {
+public class Food implements Comparable<Food> {
 	
 	private String name;
 	private Double caloricAmount;
@@ -38,6 +38,11 @@ public class Food {
 	public void setGroupIdentifier(Group groupIdentifier) {
 		this.groupIdentifier = groupIdentifier;
 	}
+	
+	@Override
+    public int compareTo(Food f) {
+        return this.getCaloricAmount().compareTo(f.getCaloricAmount());
+    }
 	
 	@Override
 	public String toString() {
