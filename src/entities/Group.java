@@ -1,7 +1,7 @@
 package entities;
 
 public enum Group {
-	GROUPE1,
-	GROUPE2,
-	GROUPE3;
+	GROUP1,
+	GROUP2,
+	GROUP3;
 }
