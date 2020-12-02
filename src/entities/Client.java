@@ -1,6 +1,8 @@
 package entities;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Client {
 	
@@ -9,6 +11,8 @@ public class Client {
 	private String phone;
 	private String email;
 	private Date birthDate;
+	
+	private List<Appointment> appointments = new ArrayList<>();
 	
 	public Client() {
 	}
@@ -61,5 +65,28 @@ public class Client {
 		this.birthDate = birthDate;
 	}
 	
+	public List<Appointment> getAppointmens() {
+		return appointments;
+	}
 	
+	public void addAppointment(Appointment newAppointment) {
+		appointments.add(0, newAppointment);
+	}
+	
+	public boolean removeAppointment(Date appointmentDate) {
+		for(Appointment app : appointments) {
+			if(app.getDate() == appointmentDate) {
+				appointments.remove(app);
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public void showAppointmens() {
+		System.out.println("CONSULTAS REALIZADAS: ");
+		for(Appointment app : appointments) {
+			System.out.println(app + "\n\n");
+		}
+	}
 }
