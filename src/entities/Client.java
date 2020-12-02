@@ -1,10 +1,13 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Client {
+	
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");  // for the appointment 
 	
 	private String name;
 	private String address;
@@ -70,12 +73,12 @@ public class Client {
 	}
 	
 	public void addAppointment(Appointment newAppointment) {
-		appointments.add(0, newAppointment);
+		appointments.add(0, newAppointment); // inserting at the beginning to indicate that the last registered appointment will be the first displayed
 	}
 	
-	public boolean removeAppointment(Date appointmentDate) {
+	public boolean removeAppointment(Date appointmentDate) { // remove the appointment based on the date and time it was performed
 		for(Appointment app : appointments) {
-			if(app.getDate() == appointmentDate) {
+			if(sdf.format(app.getDate()).equals(sdf.format(appointmentDate))) {
 				appointments.remove(app);
 				return true;
 			}
@@ -84,9 +87,9 @@ public class Client {
 	}
 	
 	public void showAppointmens() {
-		System.out.println("CONSULTAS REALIZADAS: ");
+		System.out.println("CONSULTAS REALIZADAS: \n");
 		for(Appointment app : appointments) {
-			System.out.println(app + "\n\n");
+			System.out.println(app + "\n");
 		}
 	}
 }
