@@ -9,11 +9,15 @@ public class MainFunctional {
 		
 		try {
 			FunctionalTests.clientAppointments();
-			
+			System.out.println("\nAppointments functional tests passed!\n");
 		}
 		catch(ParseException e) {
-			System.out.println("Date error in Appointment unitary tests");
+			System.out.println("Date error in clientAppontments functional tests");
 		}
+		
+		FunctionalTests.foodGroups();
+		
+		System.out.println("\nAll functional tests passed!\n");
 
 	}
 

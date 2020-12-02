@@ -27,7 +27,7 @@ public class MainUnitary {
 			System.out.println("Date error in Appointment unitary tests");
 		}
 		
-		System.out.println("Termino");
+		System.out.println("Termino: ");
 
 	}
 
